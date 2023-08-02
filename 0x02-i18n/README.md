@@ -117,3 +117,4 @@ This project contains tasks for learning to create internationalized web pages w
     ![Hello World! with a logged in message and the current time in English](assets/task_8_2.png)
 
 ## Resources:book:
+* [i18n & 110n](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-i18n-and-l10n)
