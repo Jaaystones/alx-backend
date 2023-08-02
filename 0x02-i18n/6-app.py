@@ -25,6 +25,7 @@ users = {
     4: {"name": "Teletubby", "locale": None, "timezone": "Europe/London"},
 }
 
+
 def get_user(user_id) -> Union[Dict, None]:
     """
     Get user details from the user table by ID.
@@ -36,6 +37,7 @@ def get_user(user_id) -> Union[Dict, None]:
         dict or None: The user dictionary or None if user ID not found.
     """
     return users.get(user_id)
+
 
 @app.before_request
 def before_request() -> None:
@@ -51,7 +53,7 @@ def before_request() -> None:
 
 @babel.localeselector
 def get_locale() -> str:
-     """
+    """
     Determine the best-matching language from the request's
     'Accept-Language' header or from the user's preferred locale or from the
     'locale' parameter in the request's query string.
@@ -84,6 +86,7 @@ def index_value() -> str:
         str: The rendered HTML content.
     """
     return render_template('6-index.html')
+
 
 if __name__ == '__main__':
     app.run(host='localhost', port=5000, debug=True)
